@@ -43,36 +43,22 @@ Agile sprint-based execution with evolving test artifacts
 ---
 
 ### Features to be Tested(Scope)
-User registration, login, logout
-
-
-Password validation and error handling
-
-
-Scheduling waste pickups
-
-
-Dashboard charts and statistics
-
-
-Blog, community feed, awareness content
-
-
-User settings and profile updates
-
-
-Admin panel management
-
-
-Accessibility and responsiveness
+-  **User registration, login, logout**
+-  **Password validation and error handling**
+-  **Scheduling waste pickups**
+-  **Dashboard charts and statistics**
+-  **Blog, community feed, awareness content**
+-  **User settings and profile updates**
+-  **Admin panel management**
+-  **Accessibility and responsiveness**
 
 
 
 
 ❌ Out of Scope:
-Payment integrations
-Backend/API functionality (no backend)
-Third-party analytics (Phase 2)
+- **Payment integrations**
+- **Backend/API functionality (no backend)**
+- **Third-party analytics (Phase 2)**
 
 ##  Test Strategy
 
@@ -107,13 +93,13 @@ This strategy outlines the approaches, techniques, and tools used to ensure Clea
 
 Testing activities for the CleanCity App will commence only when the following conditions are met:
 
-- ✅ **Functional Features Deployed to Netlify**
+-  **Functional Features Deployed to Netlify**
   A stable build of core functionalities—such as login, issue reporting, and dashboard access—is live on Netlify and ready for validation.
 
-- 📄 **Requirements and FRS Available**
+-  **Requirements and FRS Available**
   Functional Requirements Specification (FRS) documents are complete, reviewed, and accessible to all QA stakeholders for reference and traceability.
 
-- 💻 **Browsers, Devices & Tools Accessible**
+-  **Browsers, Devices & Tools Accessible**
   Required hardware, browsers (Chrome, Firefox, Safari), mobile devices (Android/iOS), and testing tools (JIRA, Appium, Postman, axe DevTools) are set up and operational.
 
 ---
@@ -122,7 +108,7 @@ Testing activities for the CleanCity App will commence only when the following c
 
 Testing activities for the CleanCity App will be considered complete when all of the following conditions are met:
 
-- ✅ **All Critical Test Cases Executed**
+- **All Critical Test Cases Executed**
   All prioritized scenarios (e.g. cleanliness issue reporting, dashboard updates, notifications) have been tested across environments and devices.
 
 - 🐞 **All Major Bugs Reported and Triaged**
