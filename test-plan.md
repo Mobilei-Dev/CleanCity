@@ -189,15 +189,21 @@ Each environment is configured to reflect real-world usage patterns, ensuring wi
 
 ---
 
-###  Test Schedule
+### ## 📆 Condensed Test Schedule (3 Weeks)
 
-| **Task**                   | **Timeline**   |
-|---------------------------|----------------|
-| Test Plan Creation         | Week 1         |
-| Test Case Design           | Week 2         |
-| Test Execution (Sprint 1)  | Week 3–4       |
-| Regression Testing         | Week 5         |
-| Final Report & Closure     | Week 6         |
+| **Task**                   | **Timeline**        |
+|---------------------------|---------------------|
+| ✅ Test Plan & Case Design | Week 1 (Days 1–5)   |
+| 🚀 Test Execution (Sprint) | Week 2 (Days 6–12)  |
+| 🔁 Regression & Closure    | Week 3 (Days 13–15) |
+
+---
+
+### ⏱ Breakdown:
+- **Week 1**: Plan creation, requirement review, test case writing
+- **Week 2**: Execute key functional, usability, and accessibility tests
+- **Week 3**: Perform regression testing, defect verification, and compile final report
+
 
 ---
 
