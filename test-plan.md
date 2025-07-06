@@ -6,7 +6,7 @@
 2. Lungiswa Solani
 3. Hidaya Vanessa
 
-Built with precision, passion, and purpose.
+- **Built with precision, passion, and purpose.**
 
 ## Introduction
 This test plan outlines the testing approach, strategy, and activities for the CleanCity Waste Pickup Scheduler web application. The goal is to ensure functional accuracy, usability, performance, accessibility, and compatibility across platforms.
@@ -14,31 +14,31 @@ This test plan outlines the testing approach, strategy, and activities for the C
 ---
 
 ### Objective
-Identify and log functional and non-functional defects
+- Identify and log functional and non-functional defects
 
 
-Ensure cross-browser and cross-device usability
+- Ensure cross-browser and cross-device usability
 
 
-Verify WCAG 2.1 AA accessibility compliance
+- Verify WCAG 2.1 AA accessibility compliance
 
 
-Validate performance under various network conditions
+- Validate performance under various network conditions
 
 
-Test data persistence via browser localStorage
+- Test data persistence via browser localStorage
 
 ---
 ### Strategy Overview
 This test plan adopts a Behavior-Driven Development (BDD) mindset, focusing on how real users interact with the app. It emphasizes:
 
-User stories as the foundation for test scenarios
+- User stories as the foundation for test scenarios
 
-Impact-based prioritization (e.g., public health, civic engagement)
+- Impact-based prioritization (e.g., public health, civic engagement)
 
-Continuous feedback loops with testers, users, and city officials
+- Continuous feedback loops with testers, users, and city officials
 
-Agile sprint-based execution with evolving test artifacts
+- Agile sprint-based execution with evolving test artifacts
 
 ---
 
