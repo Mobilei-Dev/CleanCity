@@ -1,4 +1,12 @@
 ## CleanCity App – Test Plan
+# 👾 Team: TestH@cks
+
+**Collaborators:**
+1. Mobilei Amdany
+2. Lungiswa Solani
+3. Hidaya Vanessa
+
+Built with precision, passion, and purpose.
 
 ## Introduction
 This test plan outlines the testing approach, strategy, and activities for the CleanCity Waste Pickup Scheduler web application. The goal is to ensure functional accuracy, usability, performance, accessibility, and compatibility across platforms.
