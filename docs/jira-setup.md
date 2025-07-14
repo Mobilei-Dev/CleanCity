@@ -4,10 +4,10 @@
 
 ## 📋 **Document Information**
 
-**Document Version:** 1.0  
-**Date:** [Current Date]  
-**Project:** CleanCity - Waste Pickup Scheduler  
-**Prepared For:** QA Testing Teams  
+**Document Version:** 1.0
+**Date:** [Current Date]
+**Project:** CleanCity - Waste Pickup Scheduler
+**Prepared For:** QA Testing Teams
 
 ---
 
@@ -433,4 +433,4 @@ Jira is a project management tool that helps teams track issues, manage projects
 
 ---
 
-**Remember: Jira is your project management backbone. Use it consistently and effectively to demonstrate your professional testing approach!** 🎯✨ 
+**Remember: Jira is your project management backbone. Use it consistently and effectively to demonstrate your professional testing approach!** 🎯✨
