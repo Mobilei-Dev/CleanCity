@@ -1,34 +1,44 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import Select
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-driver = webdriver.Chrome()
+# Start Chrome browser
+service = Service()  # Optional: specify path to chromedriver if needed
+driver = webdriver.Chrome(service=service)
 
 try:
     driver.get("https://mobilei-lungiswa-hidaya.netlify.app")
-    wait = WebDriverWait(driver, 10)
 
-    time.sleep(5)  # Let JS/React render everything
-    print("🔍 Dumping partial HTML:")
-    print(driver.page_source[:1500])  # First 1500 characters of visible HTML
-
-    print("⌛ Waiting for full name input by ID...")
-    full_name_input = wait.until(
-        EC.visibility_of_element_located((By.ID, "home-name"))
+    # Wait for the form to load
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.NAME, "form"))
     )
 
-    print("✅ Input found! Typing...")
-    full_name_input.click()
-    full_name_input.send_keys("Mobilei Amdany")
+    # Fill out the form
+    driver.find_element(By.ID, "home-name").send_keys("Mobilei Amdany")
+    driver.find_element(By.ID, "home-email").send_keys("jamdanymobilei8@gmail.com")
 
-    print("✅ Full name entered successfully.")
+    Select(driver.find_element(By.ID, "home-location")).select_by_visible_text("Kiambu")
+    Select(driver.find_element(By.ID, "home-waste")).select_by_visible_text("Organic")
+
+    driver.find_element(By.ID, "home-date").send_keys("07/20/2025")
+    driver.find_element(By.ID, "home-desc").send_keys("Please pick up near the blue bin.")
+
+    # Submit the form
+    driver.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
+
+    # Optional: wait for success message
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "success-message"))
+    )
+    print("✅ Form submitted successfully!")
 
 except Exception as e:
-    print("❌ Error occurred:")
-    print(str(e))
-
+    print("❌ Test failed:", str(e))
 finally:
-    time.sleep(3)
+    time.sleep(2)
     driver.quit()

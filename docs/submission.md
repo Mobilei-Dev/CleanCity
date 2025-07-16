@@ -2,10 +2,10 @@
 
 ## 📋 **Document Information**
 
-**Document Version:** 1.0  
-**Date:** [Current Date]  
-**Project:** CleanCity - Waste Pickup Scheduler  
-**Prepared For:** QA Testing Teams  
+**Document Version:** 1.0
+**Date:** [Current Date]
+**Project:** CleanCity - Waste Pickup Scheduler
+**Prepared For:** QA Testing Teams
 
 ## 📋 For full project details, see:
 - [README](./README.md) for project overview and requirements
@@ -57,8 +57,8 @@ All student groups must submit their entire project repository in phases, with a
 - Refined documentation and lessons learned
 
 ### **Final Submission: Complete Project**
-- **Due:** Wednesday, July 16, 2025 (same as Week 3)
-- All test files, scripts, and documentation in the `tests` folder
+- **Due:** Wednesday, July 16, 2025 (same as Week 3)All test files, scripts, and documentation in the `tests` folder
+-
 - Final test report and summary (`tests/final-report.md`)
 - Complete defect/issue log
 - All code, documentation, and deliverables committed to the repo
@@ -307,4 +307,4 @@ For questions about submission process:
 
 ---
 
-**Remember: Early submission is better than late submission. Test everything thoroughly and submit with confidence!** 🚀✨ 
+**Remember: Early submission is better than late submission. Test everything thoroughly and submit with confidence!** 🚀✨
