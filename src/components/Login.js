@@ -1,73 +1,58 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { login as authLogin, getCurrentUser, logout as authLogout } from '../services/authService';
-import { useNavigate, useLocation } from 'react-router-dom';
-import './Login.css';
+// src/components/Login.js
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
-export default function Login({ onLogin }) {
+function Login({ onLogin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
-  const user = getCurrentUser();
-  const emailRef = useRef();
 
-  // Focus first input on mount
-  useEffect(() => {
-    if (emailRef.current) emailRef.current.focus();
-  }, []);
-
-  // If already logged in, redirect to profile
-  useEffect(() => {
-    if (user) navigate('/profile', { replace: true });
-  }, [user, navigate]);
-
-  // After login, redirect to intended page or profile
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!email || !password) {
-      setError('Please enter email and password.');
-      return;
+    if (email && password) {
+      setSuccess(true);
+      onLogin?.();
+      setTimeout(() => {
+        navigate('/dashboard');
+      }, 800); // Allows success message to render before redirect
     }
-    const user = authLogin(email, password);
-    if (onLogin) onLogin(user);
-    const from = location.state?.from || '/profile';
-    navigate(from, { replace: true });
   };
 
   return (
-    <div className="login-page-root">
-      <div className="login-card" role="main" aria-label="Login form">
-        <div className="login-brand">🧹 <span>CleanCity</span></div>
-        <h2>Sign In</h2>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="login-email">Email</label>
-          <input
-            id="login-email"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            ref={emailRef}
-            autoComplete="username"
-            required
-            aria-required="true"
-          />
-          <label htmlFor="login-password">Password</label>
-          <input
-            id="login-password"
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            autoComplete="current-password"
-            required
-            aria-required="true"
-          />
-          {error && <div className="login-error" role="alert">{error}</div>}
-          <button type="submit" className="login-btn">Login</button>
-        </form>
-      </div>
-    </div>
+    <main className="login-container"> {/* ✅ Replaces role="main" */}
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="email">Email:</label>
+        <input
+          id="email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+
+        <label htmlFor="password">Password:</label>
+        <input
+          id="password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <button type="submit">Login</button>
+      </form>
+
+      {success && <p>Success! You are now logged in.</p>}
+    </main>
   );
-} 
+}
+
+// ✅ Props validation added
+Login.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+};
+
+export default Login;

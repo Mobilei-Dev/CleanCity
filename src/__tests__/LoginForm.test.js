@@ -1,7 +1,7 @@
 // src/__tests__/LoginForm.test.js
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Login from '../components/Login'; // adjust path if needed
+import Login from '../components/Login';
 import '@testing-library/jest-dom';
 
 describe('LoginForm', () => {
